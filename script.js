@@ -1,16 +1,16 @@
 /*
 1. Difference(s) between `==` and `===`?
 ==: just only compares value
- ===: compares both value and type
+===: compares both value and type
 For example: 
 5 == "5" => True because string "5" is converted to a number
 5 === "5" => false because type number cannot compare to type string
  */
 // 1. Calculate BMI (Body Mass Index)
-let weight = 60;
-let height_ = 1.6;
+let weightBMI = 60;
+let heightBMI = 1.6;
 
-let bodyMassIndex = weight / (height_ * height_);
+let bodyMassIndex = weightBMI / (heightBMI * heightBMI);
 // let bodyMassIndex = weight / height ** 2;
 console.log("Body Mass Index: ", bodyMassIndex);
 console.log(`Body Mass Index: ${bodyMassIndex}`);
@@ -38,11 +38,13 @@ console.log(
 );
 
 // 4. Calculate Time (hours:minutes:seconds)
-let hours = 1;
-let minutes = hours * 60;
-let seconds = minutes * 60;
-console.log("Calculate Time => " + hours + ":" + minutes + ":" + seconds);
-console.log(`Calculate Time => ${hours}:${minutes}:${seconds}`);
+let inputSeconds = prompt("Enter any number of seconds: ");
+// 1h = 3600s -> 1s = 1 / 3600 | Loai bo phan gio -> lay so du sa khi chia voi gio -> chia voi phut -> Thanh so giay
+let hours = Math.floor(Number(inputSeconds / 3600));
+let minutes = Math.floor(Number((inputSeconds % 3600) / 60));
+let seconds = inputSeconds % 60;
+
+console.log(`Time is => ${hours}:${minutes}:${seconds}`);
 
 // ======================================================================
 // Additional Challenges:
@@ -101,7 +103,7 @@ console.log("Total amount: ", totalAmount);
 // ======================================================================
 // Exercise 5: Check Even or Odd Number
 // Number to check
-let number = 7;
+let number = 8;
 // Check if divisible by 2
 let isEven = number % 2 == 0 ? " is Even number" : " is Odd number";
 console.log(number + isEven);
