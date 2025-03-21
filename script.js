@@ -39,7 +39,7 @@ console.log(
 
 // 4. Calculate Time (hours:minutes:seconds)
 let inputSeconds = prompt("Enter any number of seconds: ");
-// 1h = 3600s -> 1s = 1 / 3600 | Loai bo phan gio -> lay so du sa khi chia voi gio -> chia voi phut -> Thanh so giay
+// 1h = 3600s -> 1s = 1 / 3600 | Loai bo phan gio -> lay so du sau khi chia voi gio -> chia voi phut -> Thanh so phu
 let hours = Math.floor(Number(inputSeconds / 3600));
 let minutes = Math.floor(Number((inputSeconds % 3600) / 60));
 let seconds = inputSeconds % 60;
